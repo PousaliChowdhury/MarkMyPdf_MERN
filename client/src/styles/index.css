@@ -1,0 +1,178 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  height: 100%;
+}
+.fullscreen-bg {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullscreen-bg.bg-login {
+  background-image: url("/login.jpg");
+}
+.fullscreen-bg.bg-signup {
+  background-image: url("/signup.jpg");
+}
+.bg-library {
+  background-image: url("/profile.jpg");
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.auth-form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 600px;   
+  text-align: center;
+  color: #222;
+  animation: fadeIn 0.8s ease;
+  box-sizing: border-box;
+}
+.auth-form input,
+.auth-form button {
+  width: 100%;        
+  box-sizing: border-box; 
+}
+.auth-form input {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.form-title {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+}
+.auth-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.auth-form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #0056b3, #0096c7);
+}
+.form-footer {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #333;
+}
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+button {
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+button:hover {
+  background: #0056b3;
+}
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+.logout-btn {background: linear-gradient(135deg, #ff4d4d, #ff1a1a);}
+.sub-btn {background: linear-gradient(135deg, #28a745, #218838);}
+
+
+.library-form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 600px;   
+  text-align: center;
+  color: #222;
+  animation: fadeIn 0.8s ease;
+  box-sizing: border-box;
+}
+
+
+
+.pdf-card:hover {
+  transform: translateY(-3px);
+}
+
+.pdf-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pdf-card a:hover {
+  text-decoration: underline;
+}
+
+.pdf-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+

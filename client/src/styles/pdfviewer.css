@@ -1,0 +1,130 @@
+/* Main layout */
+.pdf-viewer-grid {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  /* Background image */
+  background: url('/pdfviewer.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  font-family: sans-serif;
+}
+
+/* Toolbar (navbar) */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent */
+  color: white;
+  z-index: 5;
+}
+
+.toolbar-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.toolbar-left button,
+.toolbar-right .logout-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+  width: 100px;
+}
+
+.toolbar-left button:hover,
+.toolbar-right .logout-btn:hover {
+  background: #0056b3;
+  width: 100px;
+}
+
+/* PDF viewer container */
+.viewer-container {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center PDF pages */
+  padding: 20px;
+}
+
+/* Page wrapper */
+.page-wrapper {
+  margin: 14px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.react-pdf__Page__canvas {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background: white;
+}
+
+/* Overlays */
+.viewer-container .overlays {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.highlight-overlay {
+  position: absolute;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.highlight-overlay.highlighter {
+  background-color: rgba(125, 255, 138, 0.3);
+}
+
+.highlight-overlay.pen {
+  background-color: rgba(0, 0, 0, 1);
+  height: 2px;
+}
+
+/* Floating selection menu */
+.selection-menu {
+  position: fixed;
+  transform: translate(-50%, -100%);
+  z-index: 1200;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.selection-menu button {
+  margin: 0 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #007bff;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

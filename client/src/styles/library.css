@@ -1,0 +1,52 @@
+/* Fullscreen background for library */
+.fullscreen-bg.bg-library {
+  background-image: url("/profile.jpg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;   /* stack form on top, PDFs below */
+  align-items: center;      /* center everything horizontally */
+  padding: 40px 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Upload form stays centered */
+.library-form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #222;
+  animation: fadeIn 0.8s ease;
+  box-sizing: border-box;
+  margin-bottom: 40px;   /* spacing before PDFs */
+}
+
+.library-grid {
+  list-style: none;
+  padding: 0 40px 60px;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.pdf-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+.pdf-card:hover {
+  transform: translateY(-3px);
+}

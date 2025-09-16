@@ -1,0 +1,20 @@
+cat <<EOL > .gitignore
+# dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# environment variables
+/client/.env
+/server/.env
+
+# local uploads
+uploads/
+
+# build outputs
+dist/
+build/
+
+# misc
+.DS_Store
+EOL
